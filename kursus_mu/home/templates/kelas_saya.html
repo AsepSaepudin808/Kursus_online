@@ -1,0 +1,28 @@
+{% extends 'main.html'%}
+{% block content %}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tanggal</th>
+            <th scope="col">Kursus</th>
+            <th scope="col">Link</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for dt in data %}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{dt.tanggal}}</td>
+            <td>{{dt.kursus.nama}}</td>
+            <td>{{dt.link}}</td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+</table>
+{% endblock content %}
